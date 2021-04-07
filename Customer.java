@@ -26,6 +26,10 @@ public class Customer {
 	public void setRentals(List<Rental> rentals) {
 		this.rentals = rentals;
 	}
+	
+	public void clearRentals() {
+		this.rentals.clear();
+	}
 
 	public void addRental(Rental rental) {
 		rentals.add(rental);
