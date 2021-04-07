@@ -8,9 +8,9 @@ public class Video {
 	public static final int NEW_RELEASE =2 ;
 
 	private int videoType ;
-	public static final int VHS = 1 ;
-	public static final int CD = 2 ;
-	public static final int DVD = 3 ;
+	
+	public static final int DEFAULT_PENALTY = 3 ;
+	public static final int DEFAULT_LIMIT = 0 ;
 
 	private Date registeredDate ;
 	private boolean rented ;
@@ -22,15 +22,17 @@ public class Video {
 		this.registeredDate = registeredDate ;
 	}
 
+	//Refactoring : VHS, CD, DVD 관련 case 문을 없애고 (Swtich문) 
+	//Polymorphism에 따라 return하게 하기 위함 
 	public int getLateReturnPointPenalty() {
-		int pentalty = 0 ;
-		switch ( videoType ) {
-			case VHS: pentalty = 1 ; break ;
-			case CD: pentalty = 2 ; break ;
-			case DVD: pentalty = 3 ; break ;
-		}
-		return pentalty ;
+		return DEFAULT_PENALTY ;
 	}
+	
+	public int getRentLimit() {
+		return DEFAULT_LIMIT;
+	}
+	
+	
 	public int getPriceCode() {
 		return priceCode;
 	}
