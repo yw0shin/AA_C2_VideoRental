@@ -23,17 +23,12 @@ public class Customer {
 		return rentals;
 	}
 
-	public void setRentals(List<Rental> rentals) {
-		this.rentals = rentals;
+	public void addRental(Rental rental) {
+		rentals.add(rental);
 	}
 	
 	public void clearRentals() {
 		this.rentals.clear();
-	}
-
-	public void addRental(Rental rental) {
-		rentals.add(rental);
-
 	}
 		
 
