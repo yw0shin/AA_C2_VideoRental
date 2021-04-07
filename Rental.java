@@ -8,7 +8,7 @@ public class Rental {
 	public static final int RETURNED = 1 ;
 	
 	public static final int DEFAULT_POINT = 1 ;
-	public static final int NEW_RELEASE_POINT = 1 ;
+	public static final int NEW_RELEASE_POINT = 2 ;
 	
 	
 	private Date rentDate ;

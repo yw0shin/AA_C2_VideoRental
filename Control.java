@@ -26,7 +26,7 @@ public class Control {
 	public void addVideo(String title, int videoType, int priceCode)
 	{
 		Date registeredDate = new Date();
-		Video video = new Video(title, videoType, priceCode, registeredDate) ;
+		Video video = VideoFactory.getInstance(title, videoType, priceCode, registeredDate) ;
 		videos.add(video) ;
 	}
 	
