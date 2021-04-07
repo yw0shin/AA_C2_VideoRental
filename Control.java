@@ -87,8 +87,9 @@ public class Control {
 		customers.add(james) ;
 		customers.add(brown) ;
 
-		Video v1 = new Video("v1", Video.CD, Video.REGULAR, new Date()) ;
-		Video v2 = new Video("v2", Video.DVD, Video.NEW_RELEASE, new Date()) ;
+		//@refactoring : using abstract factory 
+		Video v1 = VideoFactory.getInstance("v1", VideoFactory.CD, Video.REGULAR, new Date()) ;//@refactoring
+		Video v2 = VideoFactory.getInstance("v2", VideoFactory.DVD, Video.NEW_RELEASE, new Date()) ;//@refactoring
 		videos.add(v1) ;
 		videos.add(v2) ;
 
